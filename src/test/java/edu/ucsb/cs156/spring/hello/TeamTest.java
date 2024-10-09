@@ -60,6 +60,15 @@ public class TeamTest {
     }
 
     @Test
+    public void equals_false_true() {
+        Team team1 = new Team("Team 1");
+        Team team2 = new Team("Team 2");
+        team1.addMember("mem 1");
+        team2.addMember("mem 1");
+        assertFalse(team1.equals(team2));
+    }
+
+    @Test
     public void check_hashcode_value(){
         Team t1 = new Team();
         int result = t1.hashCode(); 
