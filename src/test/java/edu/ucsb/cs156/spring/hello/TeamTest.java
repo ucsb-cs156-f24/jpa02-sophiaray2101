@@ -58,4 +58,12 @@ public class TeamTest {
         team2.addMember("mem 2");
         assertFalse(team1.equals(team2));
     }
+
+    @Test
+    public void check_hashcode_value(){
+        Team t1 = new Team();
+        int result = t1.hashCode(); 
+        int expected = 1;
+        assertEquals(expected,result);
+    }
 }
